@@ -97,7 +97,8 @@ module HerokuHeadless
     def git_push_command
       cmd = "git push "
       cmd << "-f " if HerokuHeadless.configuration.force_push
-      cmd << "git@heroku.com:#{@app_name}.git HEAD:refs/heads/master"
+      #cmd << "git@heroku.com:#{@app_name}.git HEAD:refs/heads/master"
+      cmd << "git@heroku.com:#{@app_name}.git master
     end
 
     def run_pre_deploy_git_commands
